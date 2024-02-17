@@ -88,19 +88,19 @@ export class ActivityService extends ItemsService {
 						.toString();
 
 					const message = `
-Hello ${userName(user)},
+Olá ${userName(user)},
 
-${userName(sender)} has mentioned you in a comment:
+${userName(sender)} mencionou você em um comentário:
 
 ${comment}
 
-<a href="${href}">Click here to view.</a>
+<a href="${href}">Clique aqui para ver.</a>
 `;
 
 					await this.notificationsService.createOne({
 						recipient: userID,
 						sender: sender['id'],
-						subject: `You were mentioned in ${data['collection']}`,
+						subject: `Você foi mencionado em ${data['collection']}`,
 						message,
 						collection: data['collection'],
 						item: data['item'],
