@@ -293,16 +293,16 @@ function sidebarDeveloperReference() {
 							link: '/extensions/installing-extensions',
 							text: 'Installing Extensions',
 						},
-						{
-							link: '/extensions/creating-extensions',
-							text: 'Creating Extensions',
-						},
 					],
 				},
 				{
 					text: 'Developing Extensions',
 					collapsed: true,
 					items: [
+						{
+							link: '/extensions/creating-extensions',
+							text: 'Creating Extensions',
+						},
 						{
 							text: 'Extension Types',
 							collapsed: true,
@@ -330,10 +330,6 @@ function sidebarDeveloperReference() {
 								{
 									link: '/extensions/layouts',
 									text: 'Layouts',
-								},
-								{
-									link: '/extensions/migrations',
-									text: 'Migrations',
 								},
 								{
 									link: '/extensions/modules',
@@ -421,6 +417,10 @@ function sidebarDeveloperReference() {
 						},
 					],
 				},
+				{
+					text: 'Marketplace <span class="badge">Beta</span>',
+					link: '/extensions/marketplace/publishing',
+				},
 			],
 		},
 		{
@@ -461,6 +461,10 @@ function sidebarDeveloperReference() {
 				{
 					link: '/self-hosted/cli',
 					text: 'CLI',
+				},
+				{
+					link: '/self-hosted/migrations',
+					text: 'Migrations',
 				},
 				{
 					text: 'Single Sign-On (SSO)',
@@ -616,6 +620,16 @@ function sidebarUserGuide() {
 				{
 					text: 'Charts',
 					link: '/user-guide/insights/charts',
+				},
+			],
+		},
+		{
+			text: 'Marketplace <span class="badge">Beta</span>',
+			collapsed: true,
+			items: [
+				{
+					text: 'Introduction',
+					link: '/user-guide/marketplace/overview',
 				},
 			],
 		},
