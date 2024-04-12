@@ -102,9 +102,6 @@ applications, you can set `AUTH_<PROVIDER>_MODE=cookie`. This will however not w
 This affects App extensions that are currently extracting the token from `axios`. This will no longer be either possible
 or necessary, as the App now uses a session cookie, which will be sent with each request from the browser.
 
-This also means that the `<v-image>` component being deprecated as it does not add any value over using the native
-`<img>` tag anymore.
-
 ::: details Migration/Mitigation
 
 ::: code-group
@@ -173,6 +170,16 @@ If your current workflow depends on redirecting to an external domain after succ
 `AUTH_<PROVIDER>_REDIRECT_ALLOW_LIST` config option.
 
 `AUTH_<PROVIDER>_REDIRECT_ALLOW_LIST` accepts a comma-separated list of URLs (path is included in comparison).
+
+### Email Flow Operation No Longer Waits for Emails to Be Sent
+
+Previously, the [Send Email](https://docs.directus.io/app/flows/operations.html#send-email) Flow Operation has waited
+until emails have been sent out before proceeding to the next step.
+
+This is no longer the case, which also means that the operation can no longer be used to receive information about
+dispatched emails.
+
+If this is a requirement, it can still be achieved by building a custom operation which directly uses the `MailService`.
 
 ## Version 10.9.0
 
